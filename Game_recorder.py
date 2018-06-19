@@ -48,7 +48,7 @@ def core():
     placeholder.config(text='Ведется запись', fg='red')
     root.update()
 
-    quality_links = [x for x in stream_page.content.split() if '23b.ru' in x.decode()]
+    quality_links = [x for x in stream_page.content.split() if 'eu.devline.tv' in x.decode()]
     temp_link = quality_links[1][16:-20].decode()
     quality_db = {'regular': quality_links[0][16:-2].decode(), 'HD': quality_links[1][16:-2].decode()}
 
@@ -78,7 +78,7 @@ def core():
             else:
                 print('smth wrong')
         checker = playlist
-        if time()-start_time>=7200: #7200 для 2 часов записи
+        if time()-start_time>=12600: #3,5 часа. 7200 для 2 часов записи
             progress=False
         if game.get_state() == False:
             break
